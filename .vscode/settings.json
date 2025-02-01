@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.js": "json",
+        "type_traits": "cpp",
+        "ostream": "cpp"
+    }
+}
