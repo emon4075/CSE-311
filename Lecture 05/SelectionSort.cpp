@@ -12,7 +12,7 @@ void selectionSort()
         int MIN = i;
         for (int j = i + 1; j < A.size(); j++)
         {
-            if (A[i] > A[j])
+            if (A[MIN] > A[j])
             {
                 MIN = j;
             }
