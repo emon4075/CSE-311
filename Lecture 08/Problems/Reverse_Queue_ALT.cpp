@@ -137,6 +137,18 @@ public:
     }
 };
 
+void revQ(Queue<int> Q)
+{
+    if (Q.isEmpty())
+    {
+        return;
+    }
+    int Value = Q.getFront();
+    Q.dequeue();
+    revQ(Q);
+    cout << Value << " ";
+}
+
 int main()
 {
     FASTIO();
@@ -154,21 +166,7 @@ int main()
             cin >> X;
             Q.enqueue(X);
         }
-        while (!Q.isEmpty())
-        {
-            S.push(Q.getFront());
-            Q.dequeue();
-        }
-        while (!S.isEmpty())
-        {
-            Q.enqueue(S.getTop());
-            S.pop();
-        }
-        while (!Q.isEmpty())
-        {
-            cout << Q.getFront() << " ";
-            Q.dequeue();
-        }
+        revQ(Q);
         cout << endl;
     }
     return 0;
